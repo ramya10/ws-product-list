@@ -17,7 +17,6 @@ data.groups = data.groups.map((group) => {
 export default class Product extends Component {
     state = {
         data: data,
-        pimages: []
     }
 
     renderImage(product, index) {
@@ -77,9 +76,7 @@ export default class Product extends Component {
     render() {
         return (
             <div>
-                <div>
-                    {this.state.data.groups.map((p, index) => this.renderImage(p, index))}
-                </div>
+                {this.state.data.groups.map((p, index) => this.renderImage(p, index))}
             </div>
         )
     }
